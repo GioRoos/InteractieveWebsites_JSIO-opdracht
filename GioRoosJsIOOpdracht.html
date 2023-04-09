@@ -97,13 +97,13 @@
                     <h3>Hou me op de hoogte</h3>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="exampleRadios" id="inschrijving" value="option1">
-                        <label class="form-check-label" for="exampleRadios1">
+                        <label class="form-check-label" for="inschrijving">
                           Inschrijving voor onze niewsbrief
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="exampleRadios" id="voorwaarden" value="option2">
-                        <label class="form-check-label" for="exampleRadios2">
+                        <label class="form-check-label" for="voorwaarden">
                             Ik ga akkoord met de algemene voorwaarden.
                         </label>
                       </div>
@@ -154,34 +154,33 @@
           alert("Het veld voornaam is vereist.")
           return false;
         }
-        return true;
+
         if (naam == "") {
           alert("Het veld naam is vereist.")
           return false;
         }
-        return true;
-        
+
+
         // Gebruikersnaam controleren
         var gebruikersnaam = document.getElementById("gebruikersnaam").value;
         if (gebruikersnaam == "") {
           alert("Het veld gebruikersnaam is vereist.")
           return false;
         }
-        return true;
 
-        // Email controleren https://insidethediv.com/javascript-login-form-validation-with-source-code
-        var email = document.getElementById("emailadres").value;
-        // Regular expression to check if the email is in the correct format
-        var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        if (emailadres == "") {
-          alert("Het veld email is vereist.");
-          return false;
-        }
-        if (!emailadres.match(emailRegex)) {
-          alert("Please enter a valid email address");
-          return false;
-        }
-        return true;
+        // // Email controleren https://insidethediv.com/javascript-login-form-validation-with-source-code
+        // var email = document.getElementById("emailadres").value;
+        // // Regular expression to check if the email is in the correct format
+        // var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        // if (emailadres == "") {
+        //   alert("Het veld email is vereist.");
+        //   return false;
+        // }
+        // if (!emailadres.match(emailRegex)) {
+        //   alert("Please enter a valid email address");
+        //   return false;
+        // }
+        
 
         // Wachtwoord controleren https://insidethediv.com/javascript-login-form-validation-with-source-code
         var password = document.getElementById("password").value;
@@ -198,7 +197,7 @@
           alert("Je wachtwoorden komen niet overeen.");
         return false;
           }
-        return true;
+
       
         // Adres, land, provincie controleren
         var adres = document.getElementById("adres").value;
@@ -208,17 +207,16 @@
           alert("Het veld adres is vereist.")
           return false;
         }
-        return true;
+
         if (land == "") {
           alert("Het veld land is vereist.")
           return false;
         }
-        return true;
+
         if (provincie == "") {
           alert("Het veld provincie is vereist.")
           return false;
         }
-        return true;
 
         // Postcode controleren https://www.w3schools.com/js/tryit.asp?filename=tryjs_validation_number
         var postcode = document.getElementById("postcode").value;
@@ -229,6 +227,12 @@
         if (isNaN(postc) || postcode < 1000 || postcode > 9999) {
           alert("De waarde van postcode moet tussen 1000 en 9999 liggen")
         }
+
+        // Hou me op de hoogte controleren
+        
+        // Betaling controleren'
+
+        return true;
 }
         
     </script>
