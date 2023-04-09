@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JS IO Opdracht</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="container">
+
+        <h3>Registreer</h3>
+        <p>Meld je aan bij Anoroc Services, wij beschermen jouw software tegen malware!</p>
+        <div class="container text-center">
+
+            <div class="row">
+              <div class="col">
+                <form>
+                    <div class="form-group">
+                      <label for="voornaam">Voornaam</label>
+                      <input type="text" class="form-control" id="voornaam"  placeholder="Uw voornaam">
+                    </div>
+                    <div class="form-group">
+                      <label for="gebruikersnaam">Gebruikersnaam</label>
+                      <input type="text" class="form-control" id="gebruikersnaam" placeholder="u911236">
+                    </div>
+                    <div class="form-group">
+                        <label for="wachtwoord">Wachtwoord</label>
+                        <input type="password" class="form-control" id="wachtwoord">
+                        <small id="passwordhelp" class="form-text text-muted">Je wachtwoord moet minstens 8 tekens lang zijn</small>
+                      </div>
+                  </form>
+              </div>
+              <div class="col">
+                <form>
+                    <div class="form-group">
+                        <label for="naam">Naam</label>
+                        <input type="text" class="form-control" id="naam"  placeholder="Uw naam">
+                      </div>
+                      <div class="form-group">
+                        <label for="emailadres">E-mailadres</label>
+                        <input type="email" class="form-control" id="emailadres" aria-describedby="emailHelp" placeholder="mail@example.be">
+                        
+                      </div>
+                      <div class="form-group">
+                        <label for="herhaalwachtwoord">Herhaal wachtwoord</label>
+                        <input type="password" class="form-control" id="herhaalwachtwoord">
+                      </div>
+                </form>
+              </div>
+            </div>
+            <div>
+                <form>
+                    <div class="form-group">
+                        <label for="adres">Adres</label>
+                        <input type="text" class="form-control" id="adres"  placeholder="Uw adres en huisnummer">
+                      </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <form>
+                        <div class="form-group">
+                            <label for="land">Land</label>
+                            <input type="text" class="form-control" id="land"  placeholder="Kies een land">
+                          </div>
+                    </form>
+                </div>
+                <div class="col">
+                    <form>
+                        <div class="form-group">
+                            <label for="provincie">Provincie</label>
+                            <input type="text" class="form-control" id="provincie"  placeholder="Kies een provincie">
+                          </div>
+                    </form>
+                </div>
+                <div class="col">
+                    <form>
+                        <div class="form-group">
+                            <label for="postcode">Postcode</label>
+                            <input type="text" class="form-control" id="postcode">
+                          </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <h3>Hou me op de hoogte</h3>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="inschrijving" value="option1">
+                        <label class="form-check-label" for="exampleRadios1">
+                          Inschrijving voor onze niewsbrief
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="voorwaarden" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Ik ga akkoord met de algemene voorwaarden.
+                        </label>
+                      </div>
+                </div>
+                <div class="col">
+                    <h3>Betaling</h3>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="banking" value="option1">
+                        <label class="form-check-label" for="banking">
+                          Banking app
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="overschrijving" value="option2">
+                        <label class="form-check-label" for="overschrijving">
+                            Overschrijving
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="visa" value="option3">
+                        <label class="form-check-label" for="visa">
+                            Visa card
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="paypal" value="option4">
+                        <label class="form-check-label" for="paypal">
+                            PayPal
+                        </label>
+                      </div>
+                </div>
+            </div>
+              <div class="row ">
+                <div class="col">
+                    <button class="btn btn-primary btn-lg  mb-2" type="button" onclick="validateForm()">Wave your magic wand</button>
+                </div>
+            </div>
+    </div>
+
+    <script>
+
+      // Valideren Form
+      function validateForm() {
+        // Naam en voornaam controleren
+        var voornaam = document.getElementById("voornaam").value;
+        var naam = document.getElementById("naam").value;
+        if (voornaam == "") {
+          alert("Het veld voornaam is vereist.")
+          return false;
+        }
+        return true;
+        if (naam == "") {
+          alert("Het veld naam is vereist.")
+          return false;
+        }
+        return true;
+        
+        // Gebruikersnaam controleren
+        var gebruikersnaam = document.getElementById("gebruikersnaam").value;
+        if (gebruikersnaam == "") {
+          alert("Het veld gebruikersnaam is vereist.")
+          return false;
+        }
+        return true;
+
+        // Email controleren https://insidethediv.com/javascript-login-form-validation-with-source-code
+        var email = document.getElementById("emailadres").value;
+        // Regular expression to check if the email is in the correct format
+        var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (emailadres == "") {
+          alert("Het veld email is vereist.");
+          return false;
+        }
+        if (!emailadres.match(emailRegex)) {
+          alert("Please enter a valid email address");
+          return false;
+        }
+        return true;
+
+        // Wachtwoord controleren https://insidethediv.com/javascript-login-form-validation-with-source-code
+        var password = document.getElementById("password").value;
+        var passwordConfirm = document.getElementById("herhaalwachtwoord").value;
+        if (password == "") {
+           alert("Het veld wachtwoord is vereist.");
+          return false;
+        }
+        if (herhaalwachtwoord == "") {
+          alert("Het veld herhaal wachtwoord is vereist.");
+          return false;
+         }
+        if (password != herhaalwachtwoord) {
+          alert("Je wachtwoorden komen niet overeen.");
+        return false;
+          }
+        return true;
+      
+        // Adres, land, provincie controleren
+        var adres = document.getElementById("adres").value;
+        var land = document.getElementById("land").value;
+        var provincie = document.getElementById("provincie").value;
+        if (adres == "") {
+          alert("Het veld adres is vereist.")
+          return false;
+        }
+        return true;
+        if (land == "") {
+          alert("Het veld land is vereist.")
+          return false;
+        }
+        return true;
+        if (provincie == "") {
+          alert("Het veld provincie is vereist.")
+          return false;
+        }
+        return true;
+
+        // Postcode controleren https://www.w3schools.com/js/tryit.asp?filename=tryjs_validation_number
+        var postcode = document.getElementById("postcode").value;
+        if (postcode == "") {
+          alert("Het veld adres is vereist.")
+          return false;
+        }
+        if (isNaN(postc) || postcode < 1000 || postcode > 9999) {
+          alert("De waarde van postcode moet tussen 1000 en 9999 liggen")
+        }
+}
+        
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
